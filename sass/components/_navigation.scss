@@ -1,6 +1,8 @@
 .main-nav {
-  display: flex;
-  align-items: center;
+margin-left: 88px;
+  @media screen and (min-width: 768px) {
+    margin-left: 93px;
+  }
 }
 
 .main-nav__link {
@@ -22,13 +24,23 @@
 }
 
 .main-nav__list {
-  display: flex;
-  margin-left: 93px;
+  display: none;
+  
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      margin-right: 0;
+    }
 }
 
 .main-nav__item {
-  margin-right: 50px;
-  &:last-child {
-    margin-right: 0px;
-  }
+  margin-left: 50px;
+
+    @media screen and (min-width: 768px) {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
 }

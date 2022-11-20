@@ -1,5 +1,19 @@
 .site-header {
   border-bottom: 1px solid $header-border-color;
+  padding-top: 10px;
+    padding-bottom: 10px;
+  
+    @media screen and (min-width: 768px) {
+      padding: 0;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      padding: 0;
+    }
+}
+.header {
+  display: flex;
+  align-items: center;
 }
 .contacts-list__icon {
   margin-right: 10px;
@@ -7,10 +21,23 @@
 }
 
 .contacts-list__item {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      &:first-child {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+    }
 }
 .contacts-list__item:first-child {
   
   margin-right: 30px;
 }
+

@@ -1,10 +1,3 @@
-body {
-  color: $primary-text-color;
-  background-color: $main-lite-color;
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-}
 
 p,
 h1,
@@ -21,14 +14,34 @@ ul {
   padding: 0;
   list-style: none;
 }
+body {
+  color: $primary-text-color;
+  background-color: $main-lite-color;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
 
 button {
-  cursor: pointer;
   font-family: inherit;
+    cursor: pointer;
+    text-align: center;
+    color: $main-lite-color;
+    background-color: $accent-color;
 }
 
 img {
   display: block;
+    max-width: 100%;
+    height: auto;
+}
+.image-block {
+  display: block;
+}
+.heading {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }
 
 a {
@@ -36,6 +49,22 @@ a {
   color: currentColor;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (min-width:480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width:768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width:1200px) {
+    width: 1200px;
+  }
+}
 .section {
   padding: 60px 0;
 
@@ -43,17 +72,6 @@ a {
     padding: 94px 0;
   }
 }
-
-.container {
-   max-width: 480px;
-        margin: 0 auto;
-        padding: 0 15px;
-    
-        @media screen and (min-width: 768px) {
-            max-width: 768px;
-        }
-    
-        @media screen and (min-width: 1200px) {
-            max-width: 1200px;
-        }
+.icon {
+  transition: fill cubic-bezier(0.4, 0, 0.2, 1);
 }
