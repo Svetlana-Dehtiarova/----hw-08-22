@@ -1,35 +1,81 @@
 /*---Команда---*/
 .team {
+  background: 100%;
   background-color: $second-background-color;
 }
 
 .team__list {
-  display: flex;
-}
+display: block;
 
-.team__item {
-  flex-basis: calc(33.3333333333% - 30px);
-  &:not(:first-child) {
-    margin-left: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
   }
 }
 
 .team__item {
+  display: block;
+  text-align: center;
   background-color: $main-lite-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  &+& {
+    margin-top: 30px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .team-card {
-  color: $title-text-color;
-  text-align: center;
-  padding: 30px 24px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 30px 0 24px;
+      
+    @media screen and (min-width: 1200px) {
+      padding: 30px 0;
+    }
+}
+
+.team-card__name {
+ color: $title-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  margin-bottom: 10px;
 }
 .team-card__specialty {
   color: $primary-text-color;
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 16px;
+}
+.team__title {
+font-weight: bold;
+  color: #000;
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 30px;
   text-align: center;
-  margin-top: 10px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }

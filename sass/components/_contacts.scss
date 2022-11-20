@@ -16,6 +16,7 @@ display: flex;
 }
 }
 .menu-toggle {
+  display: none;
   min-height: 40px;
   min-width: 40px;
   background-color: transparent;
@@ -29,9 +30,6 @@ display: flex;
     fill: $accent-color;
   }
 
-  @media (min-width: 768px) {
-    display: none;
-  }
 }
 .menu-container {
 
